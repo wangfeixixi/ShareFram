@@ -23,6 +23,7 @@ class AnkoSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
             button("Login") {
                 toast("" + a.text.trim().toString() + b.text.trim().toString())
             }
+
         }
     }
 
