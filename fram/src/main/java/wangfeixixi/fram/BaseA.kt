@@ -16,6 +16,7 @@ abstract class BaseA<V : MvpView, P : MvpPresenter<V>> : MvpActivity<V, P>() {
         onCreateView()?.let { setContentView(it) }
         initView(savedInstanceState)
     }
+
     protected abstract fun onCreateView(): Int?
 
     protected abstract fun initView(savedInstanceState: Bundle?)

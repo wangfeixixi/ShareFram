@@ -45,8 +45,6 @@ class KotlinSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
     }
 
     fun showGoodbye(greetingText: String) {
-        tv_text.setTextColor(Color.BLUE)
-        tv_text.setText(greetingText)
+        tv_text.setTextColor(Color.BLUE); tv_text.setText(greetingText)
     }
-
 }
