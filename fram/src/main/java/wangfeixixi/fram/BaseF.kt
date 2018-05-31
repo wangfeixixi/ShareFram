@@ -11,8 +11,6 @@ import com.hannesdorfmann.mosby3.mvp.MvpView
 abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
 
     private var isPrepared = false
-    private var firstLoad = true
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val inflate = LayoutInflater.from(context).inflate(initContentRes(), null)
         return inflate
@@ -23,7 +21,8 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
         isPrepared = true
         initView(view, savedInstanceState)
         lazyLoad()
-
+//
+//        Log.d("BaseF", "-------------------onViewCreated")
     }
 
     protected abstract fun initContentRes(): Int
@@ -35,15 +34,32 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
     protected abstract fun initData(firstLoad: Boolean, isVisibleToUser: Boolean)
 
 
+    var laseVisble = false
+    var firstVisible = true
+
     private fun lazyLoad() {
         if (isPrepared) {
-            if (userVisibleHint && firstLoad) {
-                initData(firstLoad, userVisibleHint)
-                firstLoad = false
-                return
+            if (firstVisible && userVisibleHint && isResumed) {
+                firstVisible = false
+                initData(true, true)
+            } else {
+                if (userVisibleHint && isResumed) {
+                    initData(false, true)
+                }else{
+                    initData(false, false)
+                }
             }
-            initData(false, userVisibleHint)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        lazyLoad()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        lazyLoad()
     }
 
 

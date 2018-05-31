@@ -1,30 +1,24 @@
 package com.wangfeixixi.fram.simple.f
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.wangfeixixi.fram.R
+import com.wangfeixixi.fram.anko.AnkoActivity
 import kotlinx.android.synthetic.main.b_fragment.*
 import kotlinx.android.synthetic.main.vs_test.view.*
 import wangfeixixi.fram.BaseF
 import wangfeixixi.fram.BaseP
 import wangfeixixi.fram.BaseV
 
-class BFragment : BaseF<BaseV, BaseP<BaseV>>(), BaseV, View.OnClickListener {
+class BFragment : BaseF<BaseV, BaseP<BaseV>>(), BaseV {
+
     override fun initView(view: View, savedInstanceState: Bundle?) {
-
-    }
-
-    var isShow = false;
-
-    override fun onClick(v: View?) {
-        isShow = !isShow
-        showNoNet(isShow)
-        showToste(null)
-    }
-
-    private fun showToste(msg: String?) {
-        Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
+        btn_test.setOnClickListener {
+            activity?.startActivity(Intent(activity, AnkoActivity::class.java))
+        }
     }
 
     private var TAG = "BFragment"
@@ -41,7 +35,7 @@ class BFragment : BaseF<BaseV, BaseP<BaseV>>(), BaseV, View.OnClickListener {
     }
 
     override fun initData(firstLoad: Boolean, isVisibleToUser: Boolean) {
-//        Log.d(TAG, "firstLoad" + firstLoad + "isVisibleToUser" + isVisibleToUser)
+        Log.d(TAG, "firstLoad  " + firstLoad + "  isVisibleToUser  " + isVisibleToUser)
     }
 
     override fun createPresenter(): BaseP<BaseV> = BaseP()
