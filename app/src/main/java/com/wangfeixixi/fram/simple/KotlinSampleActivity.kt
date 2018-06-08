@@ -34,7 +34,25 @@ class KotlinSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
             }
         })
 
+        btn_ok.setOnClickListener {
+            tv_text.text = test0
+        }
+        btn_no.setOnClickListener {
+
+            tv_text.text = test
+        }
     }
+
+    var test0: String = "test0"
+
+    val test: String by lazy {
+        test0 = test0 + 1
+        tv_text.text = test0
+        tv_text.text = "asdfasf "
+
+        test0
+    }
+
 
     override fun onCreateView(): Int = R.layout.kotlin_sample_activity
     override fun createPresenter(): BaseP<BaseV> = BaseP()
