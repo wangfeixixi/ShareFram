@@ -4,7 +4,10 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentStatePagerAdapter
+import android.util.Log
+import com.igexin.sdk.PushManager
 import com.wangfeixixi.fram.R
+import com.wangfeixixi.fram.push.DemoIntentService
 import com.wangfeixixi.fram.simple.f.AFragment
 import com.wangfeixixi.fram.simple.f.BFragment
 import com.wangfeixixi.fram.simple.f.CFragment
@@ -16,8 +19,11 @@ import wangfeixixi.fram.BaseP
 import wangfeixixi.fram.BaseV
 import java.util.*
 
+
 class KotlinSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
     override fun initView(savedInstanceState: Bundle?) {
+
+
         val fragments = ArrayList<BaseF<BaseV, BaseP<BaseV>>>()
         fragments.add(AFragment())
         fragments.add(BFragment())
@@ -41,6 +47,12 @@ class KotlinSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
 
             tv_text.text = test
         }
+        Log.e("push", "开始启动");
+        // com.getui.demo.DemoIntentService 为第三方自定义的推送服务事件接收类
+        PushManager.getInstance().registerPushIntentService(this.applicationContext, DemoIntentService::class.java)
+        val clientID = PushManager.getInstance().getClientid(this.applicationContext)
+
+
     }
 
     var test0: String = "test0"

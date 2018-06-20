@@ -14,6 +14,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "VGpUunljAmAS82VzDBMx44",
+                GETUI_APP_KEY : "dPxhVN0ini8G5V5A47jHU7",
+                GETUI_APP_SECRET : "Vm0gpoPy4y7FvH71qOTS6"
+        ]
     }
     buildTypes {
         release {
@@ -24,6 +29,8 @@ android {
 }
 
 dependencies {
+    compile 'com.getui:sdk:2.12.4.0'
+
 
     //test
     testImplementation 'junit:junit:4.12'
