@@ -40,12 +40,6 @@
         <activity android:name="com.wangfeixixi.fram.anko.CountriesActivity" />
 
 
-        <service
-            android:name=".push.DemoPushService"
-            android:exported="true"
-            android:label="PushService"
-            android:process=":pushservice"></service>
-
         <activity android:name=".push.PushTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
