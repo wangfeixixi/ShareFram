@@ -45,7 +45,6 @@
             android:exported="true"
             android:label="PushService"
             android:process=":pushservice"></service>
-        <service android:name=".push.DemoIntentService" />
 
         <activity android:name=".push.PushTestActivity">
             <intent-filter>
