@@ -23,4 +23,9 @@ abstract class BaseA<V : MvpView, P : MvpPresenter<V>> : MvpActivity<V, P>() {
 
     protected abstract fun initView(savedInstanceState: Bundle?)
 
+    val mUserId: String? by lazy {
+//        SpUtil.getString(Constant.userId, null)
+
+        "asdfa"
+    }
 }

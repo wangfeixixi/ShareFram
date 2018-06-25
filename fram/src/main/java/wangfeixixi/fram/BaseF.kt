@@ -45,7 +45,7 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
             } else {
                 if (userVisibleHint && isResumed) {
                     initData(false, true)
-                }else{
+                } else {
                     initData(false, false)
                 }
             }
@@ -67,6 +67,4 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
         super.setUserVisibleHint(isVisibleToUser)
         lazyLoad()
     }
-
-
 }

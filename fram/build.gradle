@@ -40,4 +40,15 @@ dependencies {
 
     compile 'com.hannesdorfmann.mosby3:mvp:3.1.0'
 
+    //Glide v4
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    //在Kotlin中Glide的注解,kapt是 Kotlin内置的注解处理器
+    kapt 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+//OkHttp3
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    // Support-v4 (only Anko Commons)
+//    implementation "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
 }
