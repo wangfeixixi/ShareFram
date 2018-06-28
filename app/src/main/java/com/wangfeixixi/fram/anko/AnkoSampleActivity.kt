@@ -2,9 +2,9 @@ package com.wangfeixixi.fram.anko
 
 import android.os.Bundle
 import org.jetbrains.anko.*
-import wangfeixixi.fram.BaseA
-import wangfeixixi.fram.BaseP
-import wangfeixixi.fram.BaseV
+import wangfeixixi.mvp.BaseA
+import wangfeixixi.mvp.BaseP
+import wangfeixixi.mvp.BaseV
 
 class AnkoSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
     override fun onCreateView(): Int = 0

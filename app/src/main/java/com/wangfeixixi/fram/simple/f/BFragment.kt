@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.wangfeixixi.fram.R
 import com.wangfeixixi.fram.anko.AnkoActivity
 import kotlinx.android.synthetic.main.b_fragment.*
 import kotlinx.android.synthetic.main.vs_test.view.*
-import wangfeixixi.fram.BaseF
-import wangfeixixi.fram.BaseP
-import wangfeixixi.fram.BaseV
+import wangfeixixi.mvp.BaseF
+import wangfeixixi.mvp.BaseP
+import wangfeixixi.mvp.BaseV
 
 class BFragment : BaseF<BaseV, BaseP<BaseV>>(), BaseV {
 

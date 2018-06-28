@@ -10,11 +10,10 @@ import com.wangfeixixi.fram.simple.f.AFragment
 import com.wangfeixixi.fram.simple.f.BFragment
 import com.wangfeixixi.fram.simple.f.CFragment
 import com.wangfeixixi.fram.simple.f.DFragment
-import kotlinx.android.synthetic.main.kotlin_sample_activity.*
-import wangfeixixi.fram.BaseF
-import wangfeixixi.fram.BaseP
-import wangfeixixi.fram.BaseV
-import wangfeixixi.fram.SwipeBackBaseA
+import wangfeixixi.mvp.BaseF
+import wangfeixixi.mvp.BaseP
+import wangfeixixi.mvp.BaseV
+import wangfeixixi.mvp.SwipeBackBaseA
 import java.util.*
 
 

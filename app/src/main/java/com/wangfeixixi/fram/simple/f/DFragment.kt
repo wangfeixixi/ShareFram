@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.wangfeixixi.fram.R
-import wangfeixixi.fram.BaseF
-import wangfeixixi.fram.BaseP
-import wangfeixixi.fram.BaseV
+import wangfeixixi.mvp.BaseF
+import wangfeixixi.mvp.BaseP
+import wangfeixixi.mvp.BaseV
 
 class DFragment : BaseF<BaseV, BaseP<BaseV>>(), BaseV {
     override fun initView(view: View, savedInstanceState: Bundle?) {
