@@ -10,14 +10,15 @@ import com.wangfeixixi.fram.simple.f.AFragment
 import com.wangfeixixi.fram.simple.f.BFragment
 import com.wangfeixixi.fram.simple.f.CFragment
 import com.wangfeixixi.fram.simple.f.DFragment
+import kotlinx.android.synthetic.main.kotlin_sample_activity.*
+import wangfeixixi.mvp.BaseA
 import wangfeixixi.mvp.BaseF
 import wangfeixixi.mvp.BaseP
 import wangfeixixi.mvp.BaseV
-import wangfeixixi.mvp.SwipeBackBaseA
 import java.util.*
 
 
-class KotlinSampleActivity : SwipeBackBaseA<BaseV, BaseP<BaseV>>(), BaseV {
+class KotlinSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
     override fun initView(savedInstanceState: Bundle?) {
         val fragments = ArrayList<BaseF<BaseV, BaseP<BaseV>>>()
         fragments.add(AFragment())
