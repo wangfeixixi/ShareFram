@@ -7,7 +7,7 @@ import wangfeixixi.fram.BaseP
 import wangfeixixi.fram.BaseV
 
 class AnkoSampleActivity : BaseA<BaseV, BaseP<BaseV>>(), BaseV {
-    override fun onCreateView(): Int? = null
+    override fun onCreateView(): Int = 0
 
     override fun initView(savedInstanceState: Bundle?) {
         verticalLayout {

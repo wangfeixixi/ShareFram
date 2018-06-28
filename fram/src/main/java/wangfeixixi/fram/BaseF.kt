@@ -12,8 +12,7 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
 
     private var isPrepared = false
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val inflate = LayoutInflater.from(context).inflate(initContentRes(), null)
-        return inflate
+        return LayoutInflater.from(context).inflate(initContentRes(), null)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -21,8 +20,6 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
         isPrepared = true
         initView(view, savedInstanceState)
         lazyLoad()
-//
-//        Log.d("BaseF", "-------------------onViewCreated")
     }
 
     protected abstract fun initContentRes(): Int
@@ -33,8 +30,6 @@ abstract class BaseF<V : MvpView, P : MvpPresenter<V>> : MvpFragment<V, P>() {
 
     protected abstract fun initData(firstLoad: Boolean, isVisibleToUser: Boolean)
 
-
-    var laseVisble = false
     var firstVisible = true
 
     private fun lazyLoad() {
