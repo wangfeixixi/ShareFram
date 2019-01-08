@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wangfeixixi.fram">
+    package="com.wangfeixixi.sample">
 
     <!-- iBeancon功能所需权限 -->;
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -16,24 +16,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.wangfeixixi.fram.simple.KotlinSampleActivity">
+        <activity android:name="com.wangfeixixi.sample.simple.KotlinSampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wangfeixixi.fram.anko.AnkoSampleActivity">
+        <activity android:name="com.wangfeixixi.sample.anko.AnkoSampleActivity">
 
         </activity>
-        <activity android:name="com.wangfeixixi.fram.anko.AnkoActivity">
+        <activity android:name="com.wangfeixixi.sample.anko.AnkoActivity">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN" />-->
 
             <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name="com.wangfeixixi.fram.anko.CountriesActivity" />
+        <activity android:name="com.wangfeixixi.sample.anko.CountriesActivity" />
 
 
         <activity android:name=".push.PushTestActivity">
